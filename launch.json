@@ -1,0 +1,47 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "macOS Chromium",
+      "preLaunchTask": "",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/.build/default/Chromium.app/Contents/MacOS/Chromium",
+      "osx": {
+        "cwd": "${workspaceFolder}/.build/default",
+        "args": [
+          "--single-process",
+          "--no-sandbox",
+          "--disable-hang-monitor"
+        ],
+        "MIMode": "lldb",
+        "targetArchitecture": "x64",
+        "sourceFileMap": {
+          "../../": "${workspaceFolder}/"
+        },
+        "environment": [
+          {
+            // See base/debug/debugger_posix.cc
+            "name": "CHROMIUM_LLDBINIT_SOURCED",
+            "value": "1"
+          }
+        ]
+      }
+
+      // "name": "macOS Chromium",
+      // "type": "cppdbg",
+      // "request": "attach",
+      // "cwd": "${workspaceFolder}/.build/default",
+      // "program": "${workspaceFolder}/.build/default/Chromium.app/Contents/MacOS/Chromium",
+      // "args": ["--no-sandbox", "--disable-hang-monitor"],
+      // "MIMode": "lldb",
+      // "targetArchitecture": "x64",
+      // "sourceFileMap": {
+      //   "../../": "${workspaceFolder}/"
+      // }
+    }
+  ]
+}
