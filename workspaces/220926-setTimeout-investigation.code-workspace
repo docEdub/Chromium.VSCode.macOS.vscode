@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"files.associations": {
+			"filesystem": "cpp",
+			"stdexcept": "cpp",
+			"string": "cpp",
+			"bitset": "cpp",
+			"forward_list": "cpp",
+			"list": "cpp"
+		}
+	}
+}
